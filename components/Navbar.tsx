@@ -20,15 +20,10 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Helper to get correct href based on current page
-  const getLinkHref = (path: string, hash: string) => {
-    if (location.pathname === path) {
-      return hash;
-    }
-    return `${path}${hash}`;
+  const handleMobileNavClick = () => {
+    setMobileMenuOpen(false);
+    window.scrollTo(0, 0);
   };
-
-  const isHomePage = location.pathname === '/';
 
   return (
     <nav
@@ -112,35 +107,35 @@ const Navbar: React.FC = () => {
             <div className="px-4 pt-2 pb-6 space-y-2 shadow-lg">
               <Link
                 to="/our-story"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileNavClick}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
                 Our Story
               </Link>
               <Link
                 to="/programs"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileNavClick}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
                 Programs
               </Link>
               <Link
                 to="/team-wahidpur"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileNavClick}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
                 Team Wahidpur
               </Link>
               <Link
                 to="/contact"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileNavClick}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
                 Contact
               </Link>
               <Link
                 to="/donate"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={handleMobileNavClick}
                 className="block px-3 py-3 mt-4 text-center rounded-lg bg-primary text-background-dark font-bold hover:bg-primary-dark transition-colors"
               >
                 Donate Now
