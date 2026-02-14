@@ -34,13 +34,13 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
-              to="/#story"
+              to="/our-story"
               className="px-8 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-background-dark font-bold transition-all duration-300 text-lg backdrop-blur-sm"
             >
               Our Story
             </Link>
             <Link
-              to="/#programs"
+              to="/programs"
               className="px-8 py-3 rounded-lg bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 font-bold transition-all duration-300 text-lg flex items-center justify-center gap-2 group"
             >
               View Programs
