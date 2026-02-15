@@ -29,7 +29,7 @@ const Story: React.FC = () => {
                 Driven by a lifelong dedication to the soil that raised him, Iftekhar Ahmed established this foundation to channel his continuous generosity and active community service into sustainable impact.
               </p>
               <p className="mb-6">
-                As our Founder and Chairman, Iftekhar Ahmed remains deeply involved in the daily life of Wahidpur. He continues to work alongside neighbors, ensuring that education and opportunity reach every corner of the community he loves.
+                As our Founder and Chairman, Iftekhar Ahmed remains deeply involved in the daily life of Wahedpur. He continues to work alongside neighbors, ensuring that education and opportunity reach every corner of the community he loves.
               </p>
               <p>
                 Today, he leads our mission with active engagement—not just as a leader, but as a community advocate building a self-sustaining ecosystem where every individual has the tools to craft their own destiny.
@@ -37,7 +37,7 @@ const Story: React.FC = () => {
             </div>
             <div className="mt-8 flex items-center gap-4">
               <div className="h-px bg-gray-200 w-16"></div>
-              <span className="font-display italic text-gray-400">Founder, Chairman, &amp; Community Advocate</span>
+              <span className="font-display italic text-gray-400">Founder, Chairman</span>
             </div>
           </motion.div>
 
@@ -58,7 +58,7 @@ const Story: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-rich/80 to-transparent opacity-60"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-display text-xl font-bold">Iftekhar Ahmed: Founder, Chairman, &amp; Community Advocate</p>
+                <p className="font-display text-xl font-bold">Iftekhar Ahmed: Founder, Chairman</p>
                 <p className="text-sm opacity-80 font-medium">Actively Leading Our Mission</p>
               </div>
             </div>

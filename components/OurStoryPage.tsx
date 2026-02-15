@@ -26,7 +26,7 @@ const OurStoryPage: React.FC = () => {
               Our Story
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow-md">
-              Tracing the journey from a single act of kindness to a movement transforming lives in Wahidpur.
+              Tracing the journey from a single act of kindness to a movement transforming lives in Wahedpur.
             </p>
           </motion.div>
         </div>
@@ -53,13 +53,13 @@ const OurStoryPage: React.FC = () => {
               </div>
               <div className="prose prose-lg text-gray-600 leading-relaxed font-normal">
                 <p className="mb-4">
-                  The Iftekhar Ahmed Foundation was born from a simple yet profound realization: that true progress begins when we lift up our neighbors. What started as a personal commitment by Iftekhar Ahmed to support struggling families in his hometown of Wahidpur has grown into a comprehensive platform for social change.
+                  The Iftekhar Ahmed Foundation was born from a simple yet profound realization: that true progress begins when we lift up our neighbors. What started as a personal commitment by Iftekhar Ahmed to support struggling families in his hometown of Wahedpur has grown into a comprehensive platform for social change.
                 </p>
                 <p className="mb-6">
                   Growing up amidst the vibrant culture and challenges of rural Bangladesh, Iftekhar witnessed firsthand the resilience of his community, but also the systemic barriers preventing families from thriving. He vowed that success would not be a journey taken alone, but one shared with the village that raised him.
                 </p>
                 <p>
-                  Since our inception, we have moved beyond simple aid to creating sustainable infrastructure, healthcare access, and educational opportunities, ensuring that Wahidpur isn't just surviving, but flourishing for generations to come.
+                  Since our inception, we have moved beyond simple aid to creating sustainable infrastructure, healthcare access, and educational opportunities, ensuring that Wahedpur isn't just surviving, but flourishing for generations to come.
                 </p>
               </div>
             </motion.div>
@@ -116,7 +116,7 @@ const OurStoryPage: React.FC = () => {
                 <h2 className="text-3xl md:text-4xl font-display font-bold">Our Mission</h2>
               </div>
               <p className="text-lg md:text-xl text-gray-100 font-light leading-relaxed">
-                "Our mission is to empower the Wahidpur community through targeted initiatives in education, healthcare, and infrastructure. We act as a bridge between resources and need, fostering a culture of mutual support and sustainable development."
+                "Our mission is to empower the Wahedpur community through targeted initiatives in education, healthcare, and infrastructure. We act as a bridge between resources and need, fostering a culture of mutual support and sustainable development."
               </p>
             </motion.div>
           </div>
@@ -138,7 +138,7 @@ const OurStoryPage: React.FC = () => {
               { icon: 'policy', title: 'Transparency', desc: 'Openness is our foundation. We maintain clear accountability in how resources are utilized for impact.' },
               { icon: 'diversity_3', title: 'Community Engagement', desc: 'We don\'t just work for the community; we work with them, listening to their voices to guide our path.' },
               { icon: 'eco', title: 'Sustainability', desc: 'We build solutions designed to last, creating long-term resilience rather than temporary fixes.' },
-              { icon: 'handshake', title: 'Commitment', desc: 'Our dedication to Wahidpur is lifelong. We are steadfast in our promise to uplift every neighbor.' }
+              { icon: 'handshake', title: 'Commitment', desc: 'Our dedication to Wahedpur is lifelong. We are steadfast in our promise to uplift every neighbor.' }
             ].map((value, index) => (
               <motion.div 
                 key={index}
@@ -165,7 +165,7 @@ const OurStoryPage: React.FC = () => {
           <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div>
               <span className="text-primary-dark font-bold tracking-widest uppercase text-xs">Gallery</span>
-              <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold text-gray-900">Moments from Wahidpur</h2>
+              <h2 className="mt-2 text-3xl md:text-4xl font-display font-bold text-gray-900">Moments from Wahedpur</h2>
             </div>
             <p className="text-gray-600 max-w-md text-sm">Snapshots of our volunteers, community projects, and the beautiful landscape we call home.</p>
           </div>
@@ -233,10 +233,10 @@ const OurStoryPage: React.FC = () => {
               transition={{ delay: 0.4 }}
               className="md:col-span-2 relative rounded-2xl overflow-hidden group"
             >
-              <img alt="Wahidpur landscape" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM"/>
+              <img alt="Wahedpur landscape" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h4 className="font-bold text-lg">Wahidpur Village</h4>
+                  <h4 className="font-bold text-lg">Wahedpur Village</h4>
                   <p className="text-sm opacity-90">The heart of our mission</p>
                 </div>
               </div>
@@ -262,7 +262,7 @@ const OurStoryPage: React.FC = () => {
               Be Part of Our Story
             </h2>
             <p className="text-gray-200 mb-10 text-lg font-normal max-w-2xl mx-auto leading-relaxed relative z-10">
-              Every chapter of our success is written by people like you. Join Iftekhar Ahmed and our team in building a better tomorrow for Wahidpur.
+              Every chapter of our success is written by people like you. Join Iftekhar Ahmed and our team in building a better tomorrow for Wahedpur.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 justify-center relative z-10">
                 <Link to="/donate" className="px-8 py-4 rounded-xl bg-primary hover:bg-white hover:text-emerald-rich text-surface-dark font-bold text-lg transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">

@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               <li><Link className="hover:text-primary transition-colors" to="/">Home</Link></li>
               <li><Link className="hover:text-primary transition-colors" to="/our-story">Our Story</Link></li>
               <li><Link className="hover:text-primary transition-colors" to="/#programs">Programs</Link></li>
-              <li><Link className="hover:text-primary transition-colors" to="/team-wahidpur">Team Wahidpur</Link></li>
+              <li><Link className="hover:text-primary transition-colors" to="/team-wahedpur">Team Wahedpur</Link></li>
               <li><Link className="hover:text-primary transition-colors" to="/contact">Contact Us</Link></li>
               <li><Link className="hover:text-primary transition-colors" to="/donate">Donate</Link></li>
             </ul>

@@ -58,7 +58,7 @@ const ProgramsPage: React.FC = () => {
     <div className="bg-background-light">
       <header className="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
-          <img alt="Development project in Wahidpur" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZocsucTG8lGS3oJjEQ1NwFUBu0tb1dp-f6PgmrLuWR6TN-2yfz_uhEC8jWPNvhnDxL6mT6vgUmML5cbgi5zbmmbdZrkaTc7xO9rEhW5qV4BWZ1kP-rRkXJtMpExGCUQGB-_gB9LVpvZCdKK_Eb4iBJzTptJtmIq9iYglyPu2sJfYMzfFgOduAXG1G0enjpE65rSKWqwr2wjrqrKWUesuN-zIlzeJ9pCjuF149wPP-CIFXVnEcqQYEQgDnhvP2DLtLYJmiC2jxIFY" />
+          <img alt="Development project in Wahedpur" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZocsucTG8lGS3oJjEQ1NwFUBu0tb1dp-f6PgmrLuWR6TN-2yfz_uhEC8jWPNvhnDxL6mT6vgUmML5cbgi5zbmmbdZrkaTc7xO9rEhW5qV4BWZ1kP-rRkXJtMpExGCUQGB-_gB9LVpvZCdKK_Eb4iBJzTptJtmIq9iYglyPu2sJfYMzfFgOduAXG1G0enjpE65rSKWqwr2wjrqrKWUesuN-zIlzeJ9pCjuF149wPP-CIFXVnEcqQYEQgDnhvP2DLtLYJmiC2jxIFY" />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 header-light-gradient"></div>
         </div>
@@ -72,7 +72,7 @@ const ProgramsPage: React.FC = () => {
                 Our Programs
             </h1>
             <p className="text-lg md:text-xl text-white mb-8 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow-md">
-                We take a multi-faceted approach to uplifting Wahidpur, focusing on sustainable education, infrastructure, healthcare, and economic empowerment.
+                We take a multi-faceted approach to uplifting Wahedpur, focusing on sustainable education, infrastructure, healthcare, and economic empowerment.
             </p>
           </motion.div>
         </div>
@@ -118,12 +118,12 @@ const ProgramsPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="h-80 w-full relative grayscale hover:grayscale-0 transition-all duration-1000" id="team-wahidpur">
+      <section className="h-80 w-full relative grayscale hover:grayscale-0 transition-all duration-1000" id="team-wahedpur">
         <img alt="Map context" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM" />
         <div className="absolute inset-0 flex items-center justify-center bg-emerald-rich/30">
             <div className="bg-white/95 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center shadow-2xl">
                 <p className="text-primary-dark text-xs uppercase font-bold tracking-widest mb-2">Our Roots</p>
-                <h3 className="text-2xl font-display font-bold text-gray-900">Wahidpur, Bangladesh</h3>
+                <h3 className="text-2xl font-display font-bold text-gray-900">Wahedpur, Bangladesh</h3>
             </div>
         </div>
       </section>

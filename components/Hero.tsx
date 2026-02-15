@@ -49,16 +49,6 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/70"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-      >
-        <span className="material-icons text-4xl">keyboard_arrow_down</span>
-      </motion.div>
     </header>
   );
 };

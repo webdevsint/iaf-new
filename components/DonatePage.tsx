@@ -1,14 +1,34 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate, Link } from 'react-router-dom';
 
 const DonatePage: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const bkashNumber = "017XXXXXXXX";
+  const navigate = useNavigate();
 
   const handleCopy = () => {
     navigator.clipboard.writeText(bkashNumber);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const amount = formData.get('amount');
+    const trxId = formData.get('trxid');
+    const name = formData.get('name');
+    
+    // Navigate to confirmation page with state
+    navigate('/donation-confirmation', {
+      state: {
+        donationSuccessful: true,
+        amount: amount,
+        trxId: trxId,
+        date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+      }
+    });
   };
 
   return (
@@ -17,7 +37,7 @@ const DonatePage: React.FC = () => {
       <header className="relative w-full h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
           <img
-            alt="Helping hands in Wahidpur"
+            alt="Helping hands in Wahedpur"
             className="w-full h-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL"
           />
@@ -34,7 +54,7 @@ const DonatePage: React.FC = () => {
               Support Our Mission
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow-md">
-              Your contribution directly transforms lives in Wahidpur, building a foundation for sustainable growth and community empowerment.
+              Your contribution directly transforms lives in Wahedpur, building a foundation for sustainable growth and community empowerment.
             </p>
           </motion.div>
         </div>
@@ -55,7 +75,7 @@ const DonatePage: React.FC = () => {
                   <h2 className="text-2xl font-display font-bold text-gray-900 mb-2">Make a Donation</h2>
                   <p className="text-gray-600 text-sm">Fill out the form below to process your secure donation.</p>
                 </div>
-                <form className="space-y-8">
+                <form className="space-y-8" onSubmit={handleSubmit}>
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-3 uppercase tracking-wide" htmlFor="custom_amount">Donation Amount (BDT)</label>
                     <div className="relative rounded-xl shadow-sm">
@@ -75,16 +95,16 @@ const DonatePage: React.FC = () => {
                         <span className="text-gray-400 font-bold text-sm tracking-widest">BDT</span>
                       </div>
                     </div>
-                    <p className="mt-2 text-xs text-gray-500 italic">Every Taka counts towards a better future for Wahidpur.</p>
+                    <p className="mt-2 text-xs text-gray-500 italic">Every Taka counts towards a better future for Wahedpur.</p>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2" htmlFor="name">Full Name</label>
-                      <input className="w-full rounded-lg border-gray-300 bg-gray-50 py-3 px-4 text-gray-900 focus:border-primary focus:ring-primary shadow-sm" id="name" placeholder="John Doe" required type="text"/>
+                      <input className="w-full rounded-lg border-gray-300 bg-gray-50 py-3 px-4 text-gray-900 focus:border-primary focus:ring-primary shadow-sm" id="name" name="name" placeholder="John Doe" required type="text"/>
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2" htmlFor="email">Email Address</label>
-                      <input className="w-full rounded-lg border-gray-300 bg-gray-50 py-3 px-4 text-gray-900 focus:border-primary focus:ring-primary shadow-sm" id="email" placeholder="you@example.com" required type="email"/>
+                      <input className="w-full rounded-lg border-gray-300 bg-gray-50 py-3 px-4 text-gray-900 focus:border-primary focus:ring-primary shadow-sm" id="email" name="email" placeholder="you@example.com" required type="email"/>
                     </div>
                   </div>
                   <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
@@ -115,7 +135,7 @@ const DonatePage: React.FC = () => {
                     </div>
                     <div>
                       <label className="block text-sm font-bold text-gray-700 mb-2" htmlFor="trxid">bKash Transaction ID (TrxID) <span className="text-red-500">*</span></label>
-                      <input className="w-full rounded-lg border-gray-300 bg-white py-3 px-4 text-gray-900 focus:border-bkash-pink focus:ring-bkash-pink shadow-sm uppercase placeholder:normal-case" id="trxid" placeholder="e.g. 8J7A6..." required type="text"/>
+                      <input className="w-full rounded-lg border-gray-300 bg-white py-3 px-4 text-gray-900 focus:border-bkash-pink focus:ring-bkash-pink shadow-sm uppercase placeholder:normal-case" id="trxid" name="trxid" placeholder="e.g. 8J7A6..." required type="text"/>
                       <p className="mt-1 text-xs text-gray-500">This is required to verify your donation.</p>
                     </div>
                   </div>
@@ -177,7 +197,7 @@ const DonatePage: React.FC = () => {
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 text-center">
               <h3 className="font-display font-bold text-gray-900 mb-4">Transparency Guarantee</h3>
               <p className="text-sm text-gray-600 mb-6">
-                We believe in 100% transparency. Every Taka you donate is accounted for and goes directly to our programs in Wahidpur.
+                We believe in 100% transparency. Every Taka you donate is accounted for and goes directly to our programs in Wahedpur.
               </p>
               <div className="flex justify-center gap-4 text-gray-400">
                 <div className="flex flex-col items-center gap-1">
@@ -197,7 +217,7 @@ const DonatePage: React.FC = () => {
             <div className="bg-primary/5 rounded-2xl p-6 border border-primary/10">
               <h4 className="font-bold text-gray-900 text-sm mb-2">Need help donating?</h4>
               <p className="text-xs text-gray-600 mb-3">Contact our support team for assistance with bank transfers or other methods.</p>
-              <a className="text-primary-dark font-bold text-sm hover:underline" href="#">Contact Support →</a>
+              <Link className="text-primary-dark font-bold text-sm hover:underline" to="/contact">Contact Support →</Link>
             </div>
           </motion.div>
         </div>

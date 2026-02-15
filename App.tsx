@@ -5,9 +5,12 @@ import Home from './components/Home';
 import OurStoryPage from './components/OurStoryPage';
 import TeamWahidpurPage from './components/TeamWahidpurPage';
 import ContactPage from './components/ContactPage';
+import ContactSuccessPage from './components/ContactSuccessPage';
 import DonatePage from './components/DonatePage';
+import DonationConfirmationPage from './components/DonationConfirmationPage';
 import ProgramsPage from './components/ProgramsPage';
 import ProgramDetail from './components/ProgramDetail';
+import NotFoundPage from './components/NotFoundPage';
 import Footer from './components/Footer';
 
 // Helper component to handle scroll position on route change
@@ -51,9 +54,12 @@ const App: React.FC = () => {
             <Route path="/our-story" element={<OurStoryPage />} />
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/programs/:programId" element={<ProgramDetail />} />
-            <Route path="/team-wahidpur" element={<TeamWahidpurPage />} />
+            <Route path="/team-wahedpur" element={<TeamWahidpurPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/contact-success" element={<ContactSuccessPage />} />
             <Route path="/donate" element={<DonatePage />} />
+            <Route path="/donation-confirmation" element={<DonationConfirmationPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />

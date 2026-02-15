@@ -28,7 +28,7 @@ const programsData: Record<string, ProgramData> = {
       { value: "100%", label: "Pass Rate" }
     ],
     description: [
-      "In the heart of Wahidpur, education is the beacon of hope. The Wahedpur Iftekhar Ahmed High School stands as a testament to our commitment to the next generation. We provide a rigorous academic curriculum combined with extracurricular activities to ensure holistic development.",
+      "In the heart of Wahedpur, education is the beacon of hope. The Wahedpur Iftekhar Ahmed High School stands as a testament to our commitment to the next generation. We provide a rigorous academic curriculum combined with extracurricular activities to ensure holistic development.",
       "Beyond textbooks, we focus on character building, leadership skills, and digital literacy. Our computer labs and science facilities are among the best in the region, offering students opportunities that were previously out of reach."
     ],
     features: [
@@ -60,7 +60,7 @@ const programsData: Record<string, ProgramData> = {
       { title: "Digital Corner", text: "Computers with internet access allow community members to learn digital skills and access online information." },
       { title: "Study Spaces", text: "Quiet, comfortable areas provided for students to prepare for exams away from the distractions of home." }
     ],
-    additionalContent: "The library has become a focal point for cultural exchange in Wahidpur. We regularly invite guest speakers and hold workshops on topics ranging from health awareness to career guidance, making it a true center for community development.",
+    additionalContent: "The library has become a focal point for cultural exchange in Wahedpur. We regularly invite guest speakers and hold workshops on topics ranging from health awareness to career guidance, making it a true center for community development.",
     galleryImages: [
       { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ", caption: "Main Reading Room" },
       { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Children's Book Collection" },
@@ -103,7 +103,7 @@ const programsData: Record<string, ProgramData> = {
       { value: "3", label: "Bridges Repaired" }
     ],
     description: [
-      "Robust infrastructure is the backbone of economic and social activity. Before our intervention, many roads in Wahidpur were impassable during the monsoon season, cutting off access to markets, schools, and healthcare. We are changing that narrative one brick at a time.",
+      "Robust infrastructure is the backbone of economic and social activity. Before our intervention, many roads in Wahedpur were impassable during the monsoon season, cutting off access to markets, schools, and healthcare. We are changing that narrative one brick at a time.",
       "Our program focuses on durability and sustainability. We use high-quality materials to ensure longevity and employ local labor, providing employment opportunities while building assets for the community. The installation of solar streetlights has also significantly improved safety at night."
     ],
     features: [
@@ -153,14 +153,14 @@ const programsData: Record<string, ProgramData> = {
       { value: "Full", label: "Cost Coverage" }
     ],
     description: [
-      "Maternal health is a critical indicator of community well-being. Complications during childbirth can be life-threatening without timely medical intervention. Our program ensures that no mother in Wahidpur has to risk her life or her baby's life due to the inability to afford a C-section.",
+      "Maternal health is a critical indicator of community well-being. Complications during childbirth can be life-threatening without timely medical intervention. Our program ensures that no mother in Wahedpur has to risk her life or her baby's life due to the inability to afford a C-section.",
       "We partner with local hospitals and clinics to provide immediate financial support and transportation for emergency deliveries. We also provide post-operative care packages to ensure mothers heal properly and babies get a healthy start."
     ],
     features: [
       { title: "Emergency Fund", text: "A dedicated fund available 24/7 to cover surgical costs, medicines, and hospital stay." },
       { title: "Prenatal Guidance", text: "Counseling sessions to identify high-risk pregnancies early and plan for safe deliveries." }
     ],
-    additionalContent: "By removing the financial barrier to essential surgical care, we are reducing maternal and infant mortality rates in our village. Every child born safely is a promise of a brighter future for Wahidpur.",
+    additionalContent: "By removing the financial barrier to essential surgical care, we are reducing maternal and infant mortality rates in our village. Every child born safely is a promise of a brighter future for Wahedpur.",
     galleryImages: [
       { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", caption: "Healthy Mother & Baby" },
       { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Medical Consultation" },
@@ -178,7 +178,7 @@ const programsData: Record<string, ProgramData> = {
       { value: "Durable", label: "Tin Roofing" }
     ],
     description: [
-      "A safe home is the foundation of a stable life. Many impoverished families in Wahidpur live in dilapidated structures that offer little protection against monsoon rains and winter cold. Our Housing program identifies the most vulnerable households—often elderly widows or families with disabled members—and rebuilds their lives.",
+      "A safe home is the foundation of a stable life. Many impoverished families in Wahedpur live in dilapidated structures that offer little protection against monsoon rains and winter cold. Our Housing program identifies the most vulnerable households—often elderly widows or families with disabled members—and rebuilds their lives.",
       "We replace leaking thatched roofs with durable tin sheets, reinforce walls with brick and cement, and ensure raised plinths to prevent flooding. This provides not just physical shelter, but psychological security and dignity."
     ],
     features: [
@@ -396,7 +396,7 @@ const ProgramDetail: React.FC = () => {
                     Support this Initiative
                 </h2>
                 <p className="text-gray-200 mb-10 text-lg font-normal max-w-2xl mx-auto leading-relaxed relative z-10">
-                    Your contribution directly impacts the success of the {program.title}. Together, we can build a stronger Wahidpur.
+                    Your contribution directly impacts the success of the {program.title}. Together, we can build a stronger Wahedpur.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-5 justify-center relative z-10">
                     <Link to="/donate" className="px-8 py-4 rounded-xl bg-primary hover:bg-white hover:text-emerald-rich text-surface-dark font-bold text-lg transition-all shadow-lg active:scale-95 flex items-center justify-center gap-2">

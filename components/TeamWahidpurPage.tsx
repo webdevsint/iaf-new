@@ -12,7 +12,7 @@ const TeamWahidpurPage: React.FC = () => {
             className="w-full h-full object-cover"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL"
           />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 header-light-gradient"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-10">
@@ -22,7 +22,7 @@ const TeamWahidpurPage: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-extrabold text-white mb-6 leading-tight max-w-4xl mx-auto drop-shadow-lg">
-              Team Wahidpur
+              Team Wahedpur
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-normal leading-relaxed drop-shadow-md">
               The beating heart of our community, driven by passion and united by a desire to serve.
@@ -52,7 +52,7 @@ const TeamWahidpurPage: React.FC = () => {
               </div>
               <div className="prose prose-lg text-gray-600 leading-relaxed font-normal">
                 <p className="mb-4">
-                  Team Wahidpur is more than just a group of individuals; it is a movement. Comprising over 100 passionate members from diverse backgrounds—students, teachers, professionals, and local artisans—we are united by a single purpose: to uplift our village.
+                  Team Wahedpur is more than just a group of individuals; it is a movement. Comprising over 100 passionate members from diverse backgrounds—students, teachers, professionals, and local artisans—we are united by a single purpose: to uplift our village.
                 </p>
                 <p className="mb-6">
                   Each member brings unique skills and perspectives, yet all share the same commitment to service. Whether it's organizing health camps, distributing educational materials, or building essential infrastructure, our volunteers are on the ground, making a tangible difference every single day.
@@ -173,7 +173,7 @@ const TeamWahidpurPage: React.FC = () => {
               Become a Volunteer
             </h2>
             <p className="text-gray-200 mb-8 text-lg font-normal max-w-2xl mx-auto relative z-10">
-              Every project completed and every life touched is a testament to the dedication of Team Wahidpur. Join our movement today.
+              Every project completed and every life touched is a testament to the dedication of Team Wahedpur. Join our movement today.
             </p>
             <div className="bg-emerald-800/50 border border-emerald-700/50 rounded-xl p-6 max-w-md mx-auto mb-8 relative z-10 backdrop-blur-sm">
               <p className="text-gray-300 text-sm font-medium mb-2">Send your CV to</p>

@@ -62,10 +62,10 @@ const Navbar: React.FC = () => {
             </Link>
 
             <Link
-              to="/team-wahidpur"
-              className={`text-sm font-medium transition-colors ${location.pathname === '/team-wahidpur' ? 'text-primary-dark' : 'text-gray-600 hover:text-primary-dark'}`}
+              to="/team-wahedpur"
+              className={`text-sm font-medium transition-colors ${location.pathname === '/team-wahedpur' ? 'text-primary-dark' : 'text-gray-600 hover:text-primary-dark'}`}
             >
-              Team Wahidpur
+              Team Wahedpur
             </Link>
 
             <Link
@@ -120,11 +120,11 @@ const Navbar: React.FC = () => {
                 Programs
               </Link>
               <Link
-                to="/team-wahidpur"
+                to="/team-wahedpur"
                 onClick={handleMobileNavClick}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
-                Team Wahidpur
+                Team Wahedpur
               </Link>
               <Link
                 to="/contact"
