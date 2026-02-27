@@ -1,7 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const teamGalleryImages = [
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215211/team_wahedpur_4_md8qcu.webp", title: "Planning Sessions" },
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215253/school_2_zm1eue.webp", title: "Field Operations" },
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215232/green_wahedpur_1_fh1urv.webp", title: "Green Initiative" },
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215253/school_3_hjoigc.webp", title: "Our Canvas" },
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215240/housing_1_mn5cn2.webp", title: "Strength in Numbers" },
+    { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215254/school_4_wosp9g.webp", title: "Future Generations" }
+];
 
 const TeamWahidpurPage: React.FC = () => {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   return (
     <div className="bg-background-light">
       {/* Header */}
@@ -10,7 +20,9 @@ const TeamWahidpurPage: React.FC = () => {
           <img
             alt="Large group of smiling volunteers in green vests"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL"
+            src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215031/team_wahedpur_3_un9obu.jpg"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 header-light-gradient"></div>
@@ -70,11 +82,13 @@ const TeamWahidpurPage: React.FC = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="absolute inset-0 bg-primary-dark rounded-2xl transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/5]">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] bg-gray-100">
                 <img
                   alt="Volunteer helping a child"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyZKxED9S1Iye51yPmzGg2_KLJiK9exwoylYNSnKlsH4WQF2O5RTKmnRpY9gxXIFr9H5kW_pcVf79broNJHTe9JwbufJg1q0VxhJQqg_qbGLVfhZ03hlqxs0xv88m4ImDuBpRvFmEhzTL4tN424WvjQ_9_67OAIluPHwlY6uCOAASKwEAFn4y4TABeA1R5zR5cQALPvHXXGBQUfoAcpnvrtaxexbCSZUcThc7IhlxLrX3lu3Fo-WRZOnJ_vfzS4PA3Jkj9pZxM899r"
+                  src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215208/iftekhar_ahmed_and_lamima_g1pwde.jpg"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-rich/60 to-transparent opacity-60"></div>
               </div>
@@ -127,34 +141,79 @@ const TeamWahidpurPage: React.FC = () => {
             <p className="text-gray-600 max-w-md text-sm">Snapshots of our dedicated team during community work, meetings, and awareness campaigns.</p>
           </div>
           
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-            {[
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", title: "Planning Sessions" },
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ", title: "Field Operations" },
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", title: "Health Camp Duty" },
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM", title: "Our Canvas" },
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", title: "Strength in Numbers" },
-                { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyZKxED9S1Iye51yPmzGg2_KLJiK9exwoylYNSnKlsH4WQF2O5RTKmnRpY9gxXIFr9H5kW_pcVf79broNJHTe9JwbufJg1q0VxhJQqg_qbGLVfhZ03hlqxs0xv88m4ImDuBpRvFmEhzTL4tN424WvjQ_9_67OAIluPHwlY6uCOAASKwEAFn4y4TABeA1R5zR5cQALPvHXXGBQUfoAcpnvrtaxexbCSZUcThc7IhlxLrX3lu3Fo-WRZOnJ_vfzS4PA3Jkj9pZxM899r", title: "Future Generations" }
-            ].map((img, i) => (
-                <motion.div 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teamGalleryImages.map((img, i) => (
+                <div 
                     key={i}
-                    className="break-inside-avoid relative rounded-2xl overflow-hidden group mb-6"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
+                    className="relative rounded-2xl overflow-hidden cursor-pointer bg-gray-100 aspect-[4/3] group"
+                    onClick={() => setLightboxIndex(i)}
                 >
-                    <img alt={img.title} className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src={img.src} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <div className="absolute bottom-6 left-6 text-white">
-                            <h4 className="font-bold text-lg">{img.title}</h4>
-                        </div>
-                    </div>
-                </motion.div>
+                    <img 
+                        alt={img.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                        src={img.src} 
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center p-4"
+          >
+            {/* Exit Button */}
+            <button 
+              onClick={() => setLightboxIndex(null)}
+              className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-50 p-2"
+            >
+              <span className="material-icons text-4xl">close</span>
+            </button>
+
+            {/* Main Image */}
+            <div className="flex-1 flex items-center justify-center w-full max-h-[80vh] relative">
+                <AnimatePresence mode="wait">
+                    <motion.img
+                        key={lightboxIndex}
+                        src={teamGalleryImages[lightboxIndex].src}
+                        alt={teamGalleryImages[lightboxIndex].title}
+                        className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                    />
+                </AnimatePresence>
+            </div>
+
+            {/* Thumbnails */}
+            <div className="h-24 w-full max-w-4xl mt-6 flex items-center justify-center gap-3 overflow-x-auto px-4 py-2">
+                {teamGalleryImages.map((img, idx) => (
+                    <button
+                        key={idx}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setLightboxIndex(idx);
+                        }}
+                        className={`relative h-16 w-24 flex-shrink-0 rounded-md overflow-hidden transition-all duration-300 ${
+                            lightboxIndex === idx ? 'ring-2 ring-primary scale-110 opacity-100' : 'opacity-50 hover:opacity-80'
+                        }`}
+                    >
+                        <img src={img.src} alt={img.title} className="w-full h-full object-cover" />
+                    </button>
+                ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Join Us Section */}
       <section className="py-24 bg-surface-light relative overflow-hidden" id="join-us">

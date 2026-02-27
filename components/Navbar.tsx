@@ -37,12 +37,13 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-background-dark font-bold text-xl font-display">
-              IA
-            </div>
-            <span className="font-display font-bold text-xl tracking-tight text-gray-900">
-              Iftekhar Ahmed <span className="hidden sm:inline font-normal text-primary-dark">Foundation</span>
-            </span>
+            <img 
+              src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215268/logo_rqaymx.png" 
+              alt="Iftekhar Ahmed Foundation" 
+              className="h-12 w-auto"
+              loading="lazy"
+              decoding="async"
+            />
           </Link>
 
           {/* Desktop Links */}
@@ -52,6 +53,13 @@ const Navbar: React.FC = () => {
               className={`text-sm font-medium transition-colors ${location.pathname === '/our-story' ? 'text-primary-dark' : 'text-gray-600 hover:text-primary-dark'}`}
             >
               Our Story
+            </Link>
+
+            <Link
+              to="/leadership"
+              className={`text-sm font-medium transition-colors ${location.pathname === '/leadership' ? 'text-primary-dark' : 'text-gray-600 hover:text-primary-dark'}`}
+            >
+              Leadership
             </Link>
             
             <Link
@@ -102,6 +110,7 @@ const Navbar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-white border-b border-gray-100 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-6 space-y-2 shadow-lg">
@@ -111,6 +120,13 @@ const Navbar: React.FC = () => {
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
               >
                 Our Story
+              </Link>
+              <Link
+                to="/leadership"
+                onClick={handleMobileNavClick}
+                className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary-dark hover:bg-gray-50 transition-colors"
+              >
+                Leadership
               </Link>
               <Link
                 to="/programs"

@@ -1,99 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Iftekhar Ahmed Foundation</title>
-    
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    
+
     <!-- Tailwind Configuration -->
     <script id="tailwind-config">
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#13ec6d",
-                        "primary-dark": "#0fae52",
-                        "background-light": "#ffffff",
-                        "background-dark": "#0d1b13",
-                        "surface-dark": "#12251a",
-                        "surface-light": "#f8faf9",
-                        "accent-dark": "#1a3325",
-                        "emerald-rich": "#064e3b",
-                        "grass-living": "#10b981",
-                        "bkash-pink": "#e2136e"
-                    },
-                    fontFamily: {
-                        "display": ["Rubik", "sans-serif"],
-                        "body": ["Rubik", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
-                },
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13ec6d",
+              "primary-dark": "#0fae52",
+              "background-light": "#ffffff",
+              "background-dark": "#0d1b13",
+              "surface-dark": "#12251a",
+              "surface-light": "#f8faf9",
+              "accent-dark": "#1a3325",
+              "emerald-rich": "#064e3b",
+              "grass-living": "#10b981",
+              "bkash-pink": "#e2136e",
             },
-        }
+            fontFamily: {
+              display: ["Rubik", "sans-serif"],
+              body: ["Rubik", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              "2xl": "1rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
     </script>
 
     <!-- Custom CSS -->
     <style type="text/tailwindcss">
-        html {
-            scroll-behavior: smooth;
-        }
-        .dark-section-gradient {
-            background: linear-gradient(135deg, #064e3b 0%, #0d1b13 100%);
-        }
-        .vibrant-green-gradient {
-            background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
-        }
-        .header-light-gradient {
-            background: linear-gradient(to top, rgba(16, 185, 129, 0.05), rgba(6, 78, 59, 0.02));
-        }
-        .overlay-gradient {
-            background: linear-gradient(to top, rgba(6, 78, 59, 0.95), rgba(13, 27, 19, 0.4));
-        }
-        .hover-zoom-img {
-            transition: transform 0.5s ease;
-        }
-        .group:hover .hover-zoom-img {
-            transform: scale(1.05);
-        }
-        ::selection {
-            background-color: #13ec6d;
-            color: #0d1b13;
-        }
-        .form-radio:checked {
-            background-color: #13ec6d;
-            border-color: #13ec6d;
-        }
-        .form-radio:focus {
-            ring-color: #13ec6d;
-        }
+      html {
+        scroll-behavior: smooth;
+      }
+      .dark-section-gradient {
+        background: linear-gradient(135deg, #064e3b 0%, #0d1b13 100%);
+      }
+      .vibrant-green-gradient {
+        background: linear-gradient(135deg, #064e3b 0%, #10b981 100%);
+      }
+      .header-light-gradient {
+        background: linear-gradient(
+          to top,
+          rgba(16, 185, 129, 0.05),
+          rgba(6, 78, 59, 0.02)
+        );
+      }
+      .overlay-gradient {
+        background: linear-gradient(
+          to top,
+          rgba(6, 78, 59, 0.95),
+          rgba(13, 27, 19, 0.4)
+        );
+      }
+      .hover-zoom-img {
+        transition: transform 0.5s ease;
+      }
+      .group:hover .hover-zoom-img {
+        transform: scale(1.05);
+      }
+      ::selection {
+        background-color: #13ec6d;
+        color: #0d1b13;
+      }
+      .form-radio:checked {
+        background-color: #13ec6d;
+        border-color: #13ec6d;
+      }
+      .form-radio:focus {
+        ring-color: #13ec6d;
+      }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
-    "framer-motion": "https://esm.sh/framer-motion@11.0.8?deps=react@18.2.0,react-dom@18.2.0"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-<body class="bg-background-light text-slate-800 font-body antialiased">
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18.2.0",
+          "react/": "https://esm.sh/react@18.2.0/",
+          "react-dom": "https://esm.sh/react-dom@18.2.0",
+          "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+          "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+          "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+          "framer-motion": "https://esm.sh/framer-motion@11.0.8?deps=react@18.2.0,react-dom@18.2.0"
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-background-light text-slate-800 font-body antialiased">
     <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
-</body>
+    <script type="module" src="/index.tsx"></script>
+  </body>
 </html>

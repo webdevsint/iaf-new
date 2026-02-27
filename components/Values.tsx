@@ -34,7 +34,7 @@ const Values: React.FC = () => {
           <ValueItem
             icon="volunteer_activism"
             title="Compassion"
-            text="We believe that empathy is the root of all change. We treat every individual with dignity and respect as guided by our Chairman."
+            text="We believe that empathy is the root of all change. We treat every individual with dignity and respect as guided by our Founder."
             rotateClass="rotate-3"
             delay={0}
           />

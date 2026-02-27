@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import OurStoryPage from './components/OurStoryPage';
 import TeamWahidpurPage from './components/TeamWahidpurPage';
+import LeadershipPage from './components/LeadershipPage';
 import ContactPage from './components/ContactPage';
 import ContactSuccessPage from './components/ContactSuccessPage';
 import DonatePage from './components/DonatePage';
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/programs/:programId" element={<ProgramDetail />} />
             <Route path="/team-wahedpur" element={<TeamWahidpurPage />} />
+            <Route path="/leadership" element={<LeadershipPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/contact-success" element={<ContactSuccessPage />} />
             <Route path="/donate" element={<DonatePage />} />

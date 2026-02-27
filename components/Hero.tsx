@@ -4,13 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   return (
-    <header className="relative w-full h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
+    <header className="relative w-full h-[calc(100vh-6rem)] min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Background Image & Overlays */}
       <div className="absolute inset-0 z-0">
         <img
           alt="Rural community landscape in Bangladesh at sunset"
           className="w-full h-full object-cover"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZocsucTG8lGS3oJjEQ1NwFUBu0tb1dp-f6PgmrLuWR6TN-2yfz_uhEC8jWPNvhnDxL6mT6vgUmML5cbgi5zbmmbdZrkaTc7xO9rEhW5qV4BWZ1kP-rRkXJtMpExGCUQGB-_gB9LVpvZCdKK_Eb4iBJzTptJtmIq9iYglyPu2sJfYMzfFgOduAXG1G0enjpE65rSKWqwr2wjrqrKWUesuN-zIlzeJ9pCjuF149wPP-CIFXVnEcqQYEQgDnhvP2DLtLYJmiC2jxIFY"
+          src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215254/school_4_wosp9g.webp"
+          loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="absolute inset-0 header-light-gradient"></div>
@@ -18,7 +20,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

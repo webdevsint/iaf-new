@@ -32,7 +32,9 @@ const ContactPage: React.FC = () => {
           <img
             alt="Soft focus landscape of Wahedpur"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2ZocsucTG8lGS3oJjEQ1NwFUBu0tb1dp-f6PgmrLuWR6TN-2yfz_uhEC8jWPNvhnDxL6mT6vgUmML5cbgi5zbmmbdZrkaTc7xO9rEhW5qV4BWZ1kP-rRkXJtMpExGCUQGB-_gB9LVpvZCdKK_Eb4iBJzTptJtmIq9iYglyPu2sJfYMzfFgOduAXG1G0enjpE65rSKWqwr2wjrqrKWUesuN-zIlzeJ9pCjuF149wPP-CIFXVnEcqQYEQgDnhvP2DLtLYJmiC2jxIFY"
+            src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215232/green_wahedpur_1_fh1urv.webp"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 header-light-gradient"></div>
@@ -89,7 +91,7 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-display font-bold text-xl text-gray-900 mb-2">Email Us</h3>
                       <p className="text-gray-600 leading-relaxed mb-1">General Inquiries:</p>
-                      <a className="text-primary-dark font-medium hover:underline text-lg" href="mailto:info@iftekharahmedfoundation.org">info@iftekharahmedfoundation.org</a>
+                      <a className="text-primary-dark font-medium hover:underline text-lg break-all" href="mailto:info@iftekharahmedfoundation.org">info@iftekharahmedfoundation.org</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-6">

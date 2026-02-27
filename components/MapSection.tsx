@@ -6,7 +6,9 @@ const MapSection: React.FC = () => {
       <img
         alt="Map context"
         className="w-full h-full object-cover"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM"
+        src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215230/green_wahedpur_4_zmx6kp.webp"
+        loading="lazy"
+        decoding="async"
       />
       <div className="absolute inset-0 flex items-center justify-center bg-emerald-rich/30 transition-colors duration-500 group-hover:bg-emerald-rich/10">
         <div className="bg-white/95 backdrop-blur-md p-8 rounded-2xl border border-white/20 text-center shadow-2xl">

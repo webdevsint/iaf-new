@@ -29,7 +29,7 @@ const Story: React.FC = () => {
                 Driven by a lifelong dedication to the soil that raised him, Iftekhar Ahmed established this foundation to channel his continuous generosity and active community service into sustainable impact.
               </p>
               <p className="mb-6">
-                As our Founder and Chairman, Iftekhar Ahmed remains deeply involved in the daily life of Wahedpur. He continues to work alongside neighbors, ensuring that education and opportunity reach every corner of the community he loves.
+                As our Founder, Iftekhar Ahmed remains deeply involved in the daily life of Wahedpur. He continues to work alongside neighbors, ensuring that education and opportunity reach every corner of the community he loves.
               </p>
               <p>
                 Today, he leads our mission with active engagement—not just as a leader, but as a community advocate building a self-sustaining ecosystem where every individual has the tools to craft their own destiny.
@@ -37,7 +37,7 @@ const Story: React.FC = () => {
             </div>
             <div className="mt-8 flex items-center gap-4">
               <div className="h-px bg-gray-200 w-16"></div>
-              <span className="font-display italic text-gray-400">Founder, Chairman</span>
+              <span className="font-display italic text-gray-400">Founder</span>
             </div>
           </motion.div>
 
@@ -50,15 +50,17 @@ const Story: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="absolute inset-0 bg-primary-dark rounded-2xl transform translate-x-3 translate-y-3 transition-transform group-hover:translate-x-4 group-hover:translate-y-4"></div>
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] lg:aspect-square">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl aspect-[4/5] lg:aspect-square bg-gray-100">
               <img
                 alt="Portrait of Iftekhar Ahmed"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ"
+                src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215205/iftekhar_ahmed_xo91kl.jpg"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-emerald-rich/80 to-transparent opacity-60"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-display text-xl font-bold">Iftekhar Ahmed: Founder, Chairman</p>
+                <p className="font-display text-xl font-bold">Iftekhar Ahmed: Founder</p>
                 <p className="text-sm opacity-80 font-medium">Actively Leading Our Mission</p>
               </div>
             </div>

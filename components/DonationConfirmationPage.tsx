@@ -26,7 +26,9 @@ const DonationConfirmationPage: React.FC = () => {
           <img 
             alt="Joyful community in Wahidpur" 
             className="w-full h-full object-cover" 
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD"
+            src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215254/school_4_wosp9g.webp"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 header-light-gradient"></div>

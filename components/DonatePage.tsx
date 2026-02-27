@@ -39,7 +39,9 @@ const DonatePage: React.FC = () => {
           <img
             alt="Helping hands in Wahedpur"
             className="w-full h-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL"
+            src="https://res.cloudinary.com/dossfwjtw/image/upload/v1772215224/infrastructure_1_jsdlbo.webp"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="absolute inset-0 header-light-gradient"></div>
@@ -142,10 +144,6 @@ const DonatePage: React.FC = () => {
                   <button className="w-full bg-primary hover:bg-primary-dark text-background-dark font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition-all active:scale-[0.99]" type="submit">
                     Complete Donation
                   </button>
-                  <div className="flex items-center justify-center gap-2 text-xs text-gray-400 mt-4">
-                    <span className="material-icons text-base">lock</span>
-                    <span>Secure SSL Encrypted Transaction</span>
-                  </div>
                 </form>
               </div>
             </div>

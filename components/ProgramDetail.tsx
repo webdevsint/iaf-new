@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Data interface
 interface ProgramData {
@@ -21,7 +21,7 @@ const programsData: Record<string, ProgramData> = {
     id: "wahedpur-high-school",
     title: "Wahedpur Iftekhar Ahmed High School",
     subtitle: "Empowering local youth with quality secondary education, modern facilities, and a dedicated faculty to shape the leaders of tomorrow.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215250/school_1_wkwgxh.webp",
     stats: [
       { value: "500+", label: "Students Enrolled" },
       { value: "15", label: "Qualified Teachers" },
@@ -37,16 +37,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "Our alumni have gone on to pursue higher education in prestigious universities across Bangladesh, bringing pride back to our village. We continue to upgrade our facilities, recently adding a multimedia classroom to integrate technology into daily lessons.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Morning Assembly" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Science Fair 2023" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ", caption: "Library Study Session" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215250/school_1_wkwgxh.webp", caption: "School Building" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215253/school_2_zm1eue.webp", caption: "Classroom Session" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215253/school_3_hjoigc.webp", caption: "Students in Campus" }
     ]
   },
   "nurun-nahar-library": {
     id: "nurun-nahar-library",
     title: "Nurun Nahar Library",
     subtitle: "A community sanctuary for knowledge, offering a vast collection of books and digital resources to foster a culture of lifelong learning.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215213/library_1_nvtmxf.webp",
     stats: [
       { value: "2,000+", label: "Books Available" },
       { value: "Daily", label: "Open Access" },
@@ -62,16 +62,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "The library has become a focal point for cultural exchange in Wahedpur. We regularly invite guest speakers and hold workshops on topics ranging from health awareness to career guidance, making it a true center for community development.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ", caption: "Main Reading Room" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Children's Book Collection" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Evening Workshop" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215213/library_1_nvtmxf.webp", caption: "Entrance" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215214/library_2_na0qn0.webp", caption: "Reading Area" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215214/library_3_chahri.webp", caption: "Book Shelves" }
     ]
   },
   "green-wahedpur": {
     id: "green-wahedpur",
     title: "Green Wahedpur Initiative",
     subtitle: "Promoting environmental stewardship through tree planting drives, sustainable farming workshops, and eco-friendly community practices.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215232/green_wahedpur_1_fh1urv.webp",
     stats: [
       { value: "5,000+", label: "Trees Planted" },
       { value: "20+", label: "Workshops Held" },
@@ -87,16 +87,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "We engage school children as 'Green Ambassadors,' empowering them to lead cleanliness drives and monitor the health of newly planted trees. This fosters a sense of ownership and responsibility towards nature from a young age.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM", caption: "Community Planting Day" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Organic Farming Workshop" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", caption: "Green Ambassadors" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215232/green_wahedpur_1_fh1urv.webp", caption: "Tree Plantation" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215226/green_wahedpur_2_oxbnbu.webp", caption: "Community Drive" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215229/green_wahedpur_3_ootnpd.webp", caption: "Green Ambassadors" }
     ]
   },
   "village-infrastructure": {
     id: "village-infrastructure",
     title: "Village Infrastructure Development",
     subtitle: "Enhancing connectivity and safety by paving roads, repairing bridges, and installing solar streetlights throughout the village.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215224/infrastructure_1_jsdlbo.webp",
     stats: [
       { value: "5km+", label: "Roads Paved" },
       { value: "50+", label: "Solar Lights" },
@@ -112,16 +112,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "Improved connectivity has led to a boost in the local economy, allowing farmers to transport goods more easily and small businesses to operate more efficiently. It has also ensured that emergency services can reach every household year-round.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "New Paved Road" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Bridge Repair Project" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", caption: "Solar Streetlight" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215224/infrastructure_1_jsdlbo.webp", caption: "Paved Road" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215225/infrastructure_2_qkoyvv.webp", caption: "Bridge Construction" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215226/infrastructure_3_tfssou.webp", caption: "Solar Installation" }
     ]
   },
   "deep-tubewells": {
     id: "deep-tubewells",
     title: "Deep Tubewells for Safe Water",
     subtitle: "Ensuring access to arsenic-free, clean drinking water for every household to combat waterborne diseases and improve public health.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215234/rikshaw_and_tubewell_1_jweuta.webp",
     stats: [
       { value: "50+", label: "Wells Installed" },
       { value: "100%", label: "Arsenic Free" },
@@ -137,16 +137,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "Since the inception of this program, we have seen a marked decrease in waterborne diseases in the areas served. We continue to identify underserved pockets within the village to ensure universal coverage of safe drinking water.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", caption: "Installation Process" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Community Water Point" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Safe Water for All" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215234/rikshaw_and_tubewell_1_jweuta.webp", caption: "Tubewell Installation" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215238/rikshaw_and_tubewell_2_c6vyph.webp", caption: "Water Access" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215238/rikshaw_and_tubewell_3_vgb3iz.webp", caption: "Community Well" }
     ]
   },
   "c-section-support": {
     id: "c-section-support",
     title: "C-Section Delivery Support",
     subtitle: "Providing financial and logistical assistance for expecting mothers requiring C-sections, ensuring safe deliveries and maternal well-being.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215256/c_section_1_lnuiby.jpg",
     stats: [
       { value: "100+", label: "Mothers Helped" },
       { value: "100%", label: "Safe Births" },
@@ -162,16 +162,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "By removing the financial barrier to essential surgical care, we are reducing maternal and infant mortality rates in our village. Every child born safely is a promise of a brighter future for Wahedpur.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBZM86JEBr-b7uEyp85Bv_KyNxf44vaH1531-wP5nsQd43zDGbFbZwnlHaevanDwhEKO48b2NIFONoj6dXlDOr1GwUECT73pY3aXxiiSyllvAWZpvqxiyvV7q6vW9t0kwGLjFWYX2U6n2Tp8OMjna0wpWB9f93YIxsEx2pEuBTN0i3evJxyqPOzYETZegcp4Ili94noenXEp1rEUULs70YEA7wMF7bWavN0mha4s5L_PftU0D_quqOWViRFY47MxYMwLuX-r6RzjdcS", caption: "Healthy Mother & Baby" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "Medical Consultation" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyZKxED9S1Iye51yPmzGg2_KLJiK9exwoylYNSnKlsH4WQF2O5RTKmnRpY9gxXIFr9H5kW_pcVf79broNJHTe9JwbufJg1q0VxhJQqg_qbGLVfhZ03hlqxs0xv88m4ImDuBpRvFmEhzTL4tN424WvjQ_9_67OAIluPHwlY6uCOAASKwEAFn4y4TABeA1R5zR5cQALPvHXXGBQUfoAcpnvrtaxexbCSZUcThc7IhlxLrX3lu3Fo-WRZOnJ_vfzS4PA3Jkj9pZxM899r", caption: "Community Awareness" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215256/c_section_1_lnuiby.jpg", caption: "Maternal Support" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215259/c_section_2_tgtbmw.jpg", caption: "Hospital Care" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215262/c_section_3_eag0kh.jpg", caption: "Community Outreach" }
     ]
   },
   "housing-repair": {
     id: "housing-repair",
     title: "Housing Construction & Repair",
     subtitle: "Building safe, resilient homes for the most vulnerable families, protecting them from the elements and restoring dignity.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215240/housing_1_mn5cn2.webp",
     stats: [
       { value: "20+", label: "Homes Built" },
       { value: "50+", label: "Repairs Done" },
@@ -187,16 +187,16 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "The impact of a secure home is immediate. Children can study without leaks dripping on their books, elders sleep soundly without fear of the cold, and families can focus on livelihood rather than constant repairs.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAYgzRigJjWAm5F3-fMhlmsj2_9NwVP2xaLQcGyYh_9IDNV7mutp2kqOdGLqvEMDqPWAFaUBJrohGAAo_nzWDznoJfxKOHH7MriuauxMi0Huk6aMgsjLkHgxmTv8xLyVCf5rsvIiO6xDSsFDd_RK0X5sfyRqP1pFYSG30O085aBWKKvj5TR-ecqxzxqzlkzlfxAJBqUY4-vNJ2zJ4judaRQP-usS0EU5TyGOk1uWwpuZmeJdbDIbGLxjxFwCydGICCMb0_ns7U3mocL", caption: "New Tin Roof Installation" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "Completed Family Home" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDL1lWT2VasV0xgqnv-mcsr4oBpTA8kEmR062zXoGVAAOQWxBodYxFoaWhCzwAXVeDYV8ZkKdhHd4gnbMXnOOaGH0jzHKvMFMSoE-RimNwPSI4GIqMjSlpwy956hXOn-P9hKfKfLR9SB_hKyzwpYvrzM3tref3Lrsv4NE4cQoRZQ6-UzzTFoPZeRxGzNxOVcfj42sbeex9AxvHfgOSJbWFACeGgujlzY6VPhEqg5qUX-GUzxJuzuVyAO1_73HJjcuZteYjT0sTsgTZJ", caption: "Construction Volunteer Team" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215240/housing_1_mn5cn2.webp", caption: "Roof Repair" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215245/housing_2_jduppb.webp", caption: "New Construction" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215244/housing_3_vmjpzy.webp", caption: "Finished Home" }
     ]
   },
   "auto-rickshaw": {
     id: "auto-rickshaw",
     title: "Auto-Rickshaw Livelihood",
     subtitle: "Creating sustainable income opportunities by providing auto-rickshaws to unemployed youth, fostering economic independence.",
-    heroImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyZKxED9S1Iye51yPmzGg2_KLJiK9exwoylYNSnKlsH4WQF2O5RTKmnRpY9gxXIFr9H5kW_pcVf79broNJHTe9JwbufJg1q0VxhJQqg_qbGLVfhZ03hlqxs0xv88m4ImDuBpRvFmEhzTL4tN424WvjQ_9_67OAIluPHwlY6uCOAASKwEAFn4y4TABeA1R5zR5cQALPvHXXGBQUfoAcpnvrtaxexbCSZUcThc7IhlxLrX3lu3Fo-WRZOnJ_vfzS4PA3Jkj9pZxM899r",
+    heroImage: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215238/rikshaw_and_tubewell_2_c6vyph.webp",
     stats: [
       { value: "15+", label: "Rickshaws Given" },
       { value: "Daily", label: "Income Source" },
@@ -212,9 +212,9 @@ const programsData: Record<string, ProgramData> = {
     ],
     additionalContent: "The success stories are inspiring. Many recipients have gone from day-labor uncertainty to having savings, sending their children to better schools, and even expanding their small businesses. It's empowerment on wheels.",
     galleryImages: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAyZKxED9S1Iye51yPmzGg2_KLJiK9exwoylYNSnKlsH4WQF2O5RTKmnRpY9gxXIFr9H5kW_pcVf79broNJHTe9JwbufJg1q0VxhJQqg_qbGLVfhZ03hlqxs0xv88m4ImDuBpRvFmEhzTL4tN424WvjQ_9_67OAIluPHwlY6uCOAASKwEAFn4y4TABeA1R5zR5cQALPvHXXGBQUfoAcpnvrtaxexbCSZUcThc7IhlxLrX3lu3Fo-WRZOnJ_vfzS4PA3Jkj9pZxM899r", caption: "Handing Over Ceremony" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRxK6-s9ivH31g5To2BeAhHXc4-pv3XZN402tDp8UVo-h-i9bM3tWzdNa9PQUy8XLM2D1b0AjPfQOGcj2YF9AIfQERp0xSbck7TlbmztvWcur_navGw4QnofsUPo21u8kT9bhMEKlR-5why2vP6d22yXvHt_xZ7IMH9cBRb1PHkWNT6OU2xTLeUk3PzW_wpmWEE0WCRvl0SFGXX70oZHihF_38HB0djmck0PzGaXaD6nwfojCnbZ6YFc3FKEG_dHQ5rkyaQ_CApvzD", caption: "On the Road" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCPpUcPeTzJFJ1slp9CeShd-9ahfElTBWsVm7FdRzLDYhHSOe1mI3I7qiatIsDRz1RCCSIwr1vBQPKT5ITz1kDa8IGyTBZzIX_uKuiBqNOknRC-RiquEX-lzCvx-FG_QpjKMF6_AsWAlytX6xF7BRSCxR8FJpxBHjUZUdzEt5qrwZ_2T1kWezJ0W5MMNZvGBRBEXxMmujnqmyueEMZtLD6TepzFxAzy8H2TZx3x1q8SuZtxoPlZKLphHsVLtSannezyeui1V2YfbNwM", caption: "Happy Beneficiary" }
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215234/rikshaw_and_tubewell_1_jweuta.webp", caption: "Rickshaw Livelihood" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215238/rikshaw_and_tubewell_2_c6vyph.webp", caption: "Beneficiary Impact" },
+      { src: "https://res.cloudinary.com/dossfwjtw/image/upload/v1772215238/rikshaw_and_tubewell_3_vgb3iz.webp", caption: "Community Progress" }
     ]
   }
 };
@@ -222,6 +222,7 @@ const programsData: Record<string, ProgramData> = {
 const ProgramDetail: React.FC = () => {
   const { programId } = useParams<{ programId: string }>();
   const navigate = useNavigate();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   // Scroll to top on mount
   useEffect(() => {
@@ -250,6 +251,7 @@ const ProgramDetail: React.FC = () => {
             alt={program.title}
             className="w-full h-full object-cover opacity-80" 
             src={program.heroImage}
+            decoding="async"
           />
           <div className="absolute inset-0 header-light-gradient"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
@@ -362,23 +364,73 @@ const ProgramDetail: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
                 {program.galleryImages.map((img, index) => (
-                    <motion.div 
-                        key={index}
-                        className={`rounded-xl overflow-hidden relative group ${index === 0 ? 'lg:col-span-2 row-span-2' : ''}`}
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                    >
-                        <img alt={img.caption} className="w-full h-full object-cover hover-zoom-img" src={img.src} />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <p className="text-white font-medium">{img.caption}</p>
+                        <div className={`rounded-xl overflow-hidden relative group cursor-pointer bg-gray-100 ${index === 0 ? 'lg:col-span-2 row-span-2' : ''}`}>
+                          <motion.img 
+                              alt={img.caption} 
+                              className="w-full h-full object-cover hover-zoom-img" 
+                              src={img.src} 
+                              loading="lazy"
+                              decoding="async"
+                          />
                         </div>
-                    </motion.div>
                 ))}
             </div>
         </div>
       </section>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && program && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-md flex flex-col items-center justify-center p-4"
+          >
+            {/* Exit Button */}
+            <button 
+              onClick={() => setLightboxIndex(null)}
+              className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors z-50 p-2"
+            >
+              <span className="material-icons text-4xl">close</span>
+            </button>
+
+            {/* Main Image */}
+            <div className="flex-1 flex items-center justify-center w-full max-h-[80vh] relative">
+                <AnimatePresence mode="wait">
+                    <motion.img
+                        key={lightboxIndex}
+                        src={program.galleryImages[lightboxIndex].src}
+                        alt={program.galleryImages[lightboxIndex].caption}
+                        className="max-h-full max-w-full object-contain rounded-lg shadow-2xl"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                    />
+                </AnimatePresence>
+            </div>
+
+            {/* Thumbnails */}
+            <div className="h-24 w-full max-w-4xl mt-6 flex items-center justify-center gap-3 overflow-x-auto px-4 py-2">
+                {program.galleryImages.map((img, idx) => (
+                    <button
+                        key={idx}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            setLightboxIndex(idx);
+                        }}
+                        className={`relative h-16 w-24 flex-shrink-0 rounded-md overflow-hidden transition-all duration-300 ${
+                            lightboxIndex === idx ? 'ring-2 ring-primary scale-110 opacity-100' : 'opacity-50 hover:opacity-80'
+                        }`}
+                    >
+                        <img src={img.src} alt={img.caption} className="w-full h-full object-cover" />
+                    </button>
+                ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* CTA Section */}
       <section className="py-24 bg-surface-light relative overflow-hidden" id="donate-cta">
